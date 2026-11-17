@@ -26,7 +26,7 @@ Los resultados y su análisis están en el informe IEEE (`reporte/`).
 
 Archivos principales de `codigo/`: `sistema.py` y `tnep.py` (modelo de Garcés), `tnep_heydari.py` (HVDC, eólica, CVaR),
 `incertidumbre.py` (segmentación, PEM y Monte Carlo + k-means), `datos_garver.py`, `datos_rts24.py` y `datos_heydari.py` (datos y resultados
-publicados), `reto1_*.py` y `reto2_garver.py` (experimentos) y `verificaciones_*.py`.
+publicados), `reto1_*.py`, `reto2_garver.py` y `reto2_semillas.py` (experimentos) y `verificaciones_*.py`.
 
 ## Requisitos
 
@@ -59,6 +59,7 @@ Los scripts se ejecutan desde `codigo/` y escriben en `../resultados/`.
     python reto2_garver.py dual 3600        # formulacion de dualidad
     python reto2_garver.py pem              # metodologia 2 (PEM)
     python reto2_garver.py mc               # metodologia 3 (Monte Carlo + k-means; ~11 min con HiGHS)
+    python reto2_semillas.py                # metodologia 3: K = 20 con 5 semillas (casos 2-4; ~15 min con HiGHS)
     #   con HiGHS en Windows:  set TNEP_SOLVER=highs   (Linux/Mac: TNEP_SOLVER=highs python ...)
     python reto2_garver.py sens             # sensibilidad al coeficiente de demanda
 
